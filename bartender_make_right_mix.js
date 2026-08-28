@@ -11843,7 +11843,7 @@ Y8Blacklisted.prototype = $extend(openfl_display_Sprite.prototype,{
 	,sptBlacklisted: null
 	,txtLink: null
 	,clickLinkText: function(e) {
-		openfl_Lib.getURL(new openfl_net_URLRequest("http://www.y8.com/games/" + Setting.gameName));
+		openfl_Lib.getURL(new openfl_net_URLRequest("" + Setting.gameName));
 		SoundGame.playSFX("sounds","click",DataGame.volClick);
 	}
 	,assetsLoad: function() {
@@ -11854,7 +11854,7 @@ Y8Blacklisted.prototype = $extend(openfl_display_Sprite.prototype,{
 		Global.sptFullScreenList.push(this.sptBlack);
 		this.sptBlacklisted = Global.loadImage("images/Y8","blacklisted.png");
 		this.txtLink = new BaseText("FredokaOne-Regular.ttf",20,17285,true);
-		this.txtLink.set_text("http://www.y8.com/games/" + Setting.gameName);
+		this.txtLink.set_text("" + Setting.gameName);
 	}
 	,assetsAddChild: function() {
 		Global.align(this.sptBlack,0.5,0.5,0,0);
@@ -69648,7 +69648,7 @@ Global.alignList = [];
 Global.sptFullScreenList = [];
 Global.animationList = [];
 Global.DOMAIN = "";
-Global.linkWebsite = "http://www.y8.com/?utm_source=";
+Global.linkWebsite = "";
 Global.linkSplash = "&utm_medium=g_prelogo&utm_campaign=";
 Global.linkLogo = "&utm_medium=g_menulogo&utm_campaign=";
 Global.linkMore = "&utm_medium=g_moregames&utm_campaign=";
